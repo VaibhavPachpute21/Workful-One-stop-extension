@@ -1,9 +1,13 @@
 {
-    "name": "All in One!",
-    "description": "My first Chrome App.",
+    "name": "Workful",
+    "description": "One stop extension for all tasks!",
     "version": "0.1",
     "manifest_version": 3,
     "action": {
         "default_popup": "popup.html"
-    }
+    },
+    "icons":{"16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"}
 }

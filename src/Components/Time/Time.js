@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+// import './Time.css'
 
 const Time = () => {
     const [currentTime,setCurrentTime]=useState('')
@@ -19,18 +19,17 @@ const Time = () => {
 
   return (
     <div style={{
+      border:'2px solid white',
       display:'flex',
-      border:"2px solid white",
       flexDirection:'column',
+      justifyContent:'center',
       width:'200px',
-      height:'100%',
+      height:'50px',
       backgroundColor:'black',
       color:'white',
-      fontSize:'22px',
+      padding:'10px',
       borderRadius:'10px',
-      justifyContent:'center',
-      padding:'5px'
-
+      fontSize:'20px',
     }}>
         <span >{date}</span>
         <div>{currentTime}</div>
