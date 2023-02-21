@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// import './Time.css'
 
 const Time = () => {
     const [currentTime,setCurrentTime]=useState('')
