@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 const Greet = () => {
     const [greetMsg, setgreetMSG] = useState('')
-    // const [quote, setQuote] = useState('')
+    const [quote, setQuote] = useState('')
     let t = new Date().getHours()
     useEffect(async () => {
         if (t < 12) {
@@ -15,21 +15,21 @@ const Greet = () => {
         else {
             setgreetMSG("Good Evening!")
         }
-        // getQuotes();
+        getQuotes();
     }, [t]
     )
 
 
-    // async function getQuotes() {
-    //     await fetch(
-    //         "https://type.fit/api/quotes")
-    //         .then((res) => res.json())
-    //         .then((json) => {
-    //             const j = Math.floor(Math.random() * 1643)
-    //             setQuote(json[j]['text']);
-    //             console.log(json)
-    //         })
-    // }
+    async function getQuotes() {
+        await fetch(
+            "https://type.fit/api/quotes")
+            .then((res) => res.json())
+            .then((json) => {
+                const j = Math.floor(Math.random() * 1643)
+                setQuote(json[j]['text']);
+                console.log(json)
+            })
+    }
 
 
 
@@ -37,9 +37,9 @@ const Greet = () => {
     return (
         <div style={{
             display: 'flex',
-            width: '200px',
+            width: '400px',
             flexDirection: 'column',
-            backgroundColor: 'black',
+            backgroundColor: '#4169e1',
             fontSize: '20px',
             padding: '10px',
             color: 'white',
@@ -48,7 +48,9 @@ const Greet = () => {
         }}>
             
             <div>{greetMsg}</div>
-            {/* <div>{quote.toString()}</div> */}
+            <div
+            style={{fontSize:'16px',fontWeight:'bold',color:'white'}}
+            >{quote.toString()}</div>
             
         </div>
     )

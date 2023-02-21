@@ -18,11 +18,12 @@ const Time = () => {
 
   return (
     <div style={{
+      // textAlign:'center',
       border:'2px solid white',
       display:'flex',
       flexDirection:'column',
       justifyContent:'center',
-      width:'200px',
+      width:'150px',
       height:'50px',
       backgroundColor:'black',
       color:'white',
