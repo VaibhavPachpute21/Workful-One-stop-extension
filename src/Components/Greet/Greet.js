@@ -47,9 +47,11 @@ const Greet = () => {
             justifyContent: 'center'
         }}>
             
-            <div>{greetMsg}</div>
             <div
-            style={{fontSize:'16px',fontWeight:'bold',color:'white'}}
+            style={{fontSize:'18px',fontWeight:'bold',color:'white'}}
+            >{greetMsg}</div>
+            <div
+            style={{fontSize:'16px',fontWeight:'700',color:'white'}}
             >{quote.toString()}</div>
             
         </div>

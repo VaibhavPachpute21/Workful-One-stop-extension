@@ -23,7 +23,7 @@ const Time = () => {
       display:'flex',
       flexDirection:'column',
       justifyContent:'center',
-      width:'150px',
+      width:'170px',
       height:'50px',
       backgroundColor:'black',
       color:'white',
