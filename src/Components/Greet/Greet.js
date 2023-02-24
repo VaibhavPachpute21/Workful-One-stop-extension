@@ -5,7 +5,9 @@ const Greet = () => {
     const [greetMsg, setgreetMSG] = useState('')
     const [quote, setQuote] = useState('')
     let t = new Date().getHours()
-    useEffect(async () => {
+
+
+    useEffect(() => {
         if (t < 12) {
             setgreetMSG("Good Morning!")
         }
@@ -16,8 +18,7 @@ const Greet = () => {
             setgreetMSG("Good Evening!")
         }
         getQuotes();
-    }, [t]
-    )
+    }, [t])
 
 
     async function getQuotes() {
@@ -27,7 +28,6 @@ const Greet = () => {
             .then((json) => {
                 const j = Math.floor(Math.random() * 1643)
                 setQuote(json[j]['text']);
-                console.log(json)
             })
     }
 
@@ -46,14 +46,14 @@ const Greet = () => {
             borderRadius: '10px',
             justifyContent: 'center'
         }}>
-            
+
             <div
-            style={{fontSize:'18px',fontWeight:'bold',color:'white'}}
+                style={{ fontSize: '18px', fontWeight: 'bold', color: 'white' }}
             >{greetMsg}</div>
             <div
-            style={{fontSize:'16px',fontWeight:'700',color:'white'}}
+                style={{ fontSize: '16px', fontWeight: '700', color: 'white' }}
             >{quote.toString()}</div>
-            
+
         </div>
     )
 }
