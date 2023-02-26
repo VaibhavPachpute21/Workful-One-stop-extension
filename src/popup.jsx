@@ -12,8 +12,7 @@ function Popup(){
         <div>
             <Greet/>
             <Time/>
-            <Todo/>
-            
+            <Todo/> 
         </div>
     );
 }
