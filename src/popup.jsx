@@ -11,8 +11,11 @@ function Popup(){
     return(
         <div>
             <Greet/>
+            <div style={{display:'flex',flexDirection:'row'}}>
             <Time/>
             <Todo/> 
+            </div>
+            
         </div>
     );
 }

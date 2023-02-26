@@ -44,7 +44,8 @@ const Greet = () => {
             padding: '10px',
             color: 'white',
             borderRadius: '10px',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            border:'1px solid white'
         }}>
 
             <div

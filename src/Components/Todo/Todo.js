@@ -13,17 +13,41 @@ const Todo = () => {
         console.log(todos)
     }, [todos])
 
-    return (<div className="todo-card">
-        <div className="text-center">
-            <div className="input-group mb-3">
-                <input type="text" id="todoInput" value={todoTitle} className="form-control border" placeholder="Task Name" onChange={(e) => { setTodoTitle(e.target.value) }} />
-                <button className="btn" type="button"
-                    onClick={() => { dispacth(addTodo(todoTitle)); setTodoTitle('') }}
-                >Add</button>
+    return (
+        <div style={{
+            marginTop: '1.5px',
+            border: '2px solid #002c80',
+            display: 'flex',
+            flexDirection: 'column',
+            padding: '5px',
+            borderRadius: '10px',
+            width: '210px'
+        }}
+        >   
+        <span style={{
+            fontSize:'14px',
+            fontWeight:'600'
+
+        }}>What's your main focus Today?</span>
+            <div style={{ display: 'flex' }}>
+                <input style={{
+                    width: '100%',
+                    border: '1px solid black',
+                    padding: '5px',
+                    fontSize: '16px'
+                }}
+                    type="text" value={todoTitle} placeholder="Task Name" onChange={(e) => { setTodoTitle(e.target.value) }} />
+                <button style={{
+                    border: 'solid 1px #001c52',
+                    backgroundColor: '#333333',
+                    color: 'white',
+                    padding: '5px',
+                    fontSize: '16px',
+                }}
+                    type="button" onClick={() => { dispacth(addTodo(todoTitle)); setTodoTitle('') }}>Add</button>
             </div>
             <TodosList />
         </div>
-    </div>
     );
 }
 
