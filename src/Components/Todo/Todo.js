@@ -9,6 +9,16 @@ const Todo = () => {
     const [todoTitle, setTodoTitle] = useState('')
 
     const todos = useSelector((state) => state.todoReducer)
+
+    function addData() {
+        var todo = {
+            title: todoTitle,
+            isDOne: false
+        }
+        dispacth(addTodo(todo));
+    }
+
+
     useEffect(() => {
         console.log(todos)
     }, [todos])
@@ -23,12 +33,12 @@ const Todo = () => {
             borderRadius: '10px',
             width: '210px'
         }}
-        >   
-        <span style={{
-            fontSize:'14px',
-            fontWeight:'600'
+        >
+            <span style={{
+                fontSize: '14px',
+                fontWeight: '600'
 
-        }}>What's your main focus Today?</span>
+            }}>What's your main focus Today?</span>
             <div style={{ display: 'flex' }}>
                 <input style={{
                     width: '100%',
@@ -44,7 +54,7 @@ const Todo = () => {
                     padding: '5px',
                     fontSize: '16px',
                 }}
-                    type="button" onClick={() => { dispacth(addTodo(todoTitle)); setTodoTitle('') }}>Add</button>
+                    type="button" onClick={() => { addData(); setTodoTitle('') }}>Add</button>
             </div>
             <TodosList />
         </div>

@@ -11,13 +11,13 @@ const TodosList = () => {
   }, [todos])
   return (
     <>
-      {todos.todos.map((todo) => {
-        return <div style={{
+      {todos.todos.map((todo,idx) => {
+        return <div key={idx} style={{
           marginTop:'2px'}}>
           <div style={{
             display:'flex'
           }}>
-            <input type={'text'} value={todo} style={{
+            <input readOnly={true} type={'text'} value={todo.title} style={{
               width: '90%',
               border: '1px solid black',
               padding: '5px',
@@ -25,7 +25,7 @@ const TodosList = () => {
             }}
             
             />
-            <button onClick={() => { dispacth(removeTodo(todo)) }}
+            <button onClick={() => {dispacth(removeTodo(todo)) }}
             style={{
               border: 'solid 1px #001c52',
                   backgroundColor: '#333333',
