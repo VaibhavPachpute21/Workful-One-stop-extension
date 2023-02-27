@@ -21,16 +21,16 @@ const Time = () => {
   return (
     <div style={{
       border: '2px solid white', display: 'flex', flexDirection: 'column', justifyContent: 'center',
-      width: '170px', height: '50px', backgroundColor: 'black', color: 'white', padding: '10px',
-      borderRadius: '10px', fontSize: '20px',
+      width: '170px', height: '55px', backgroundColor: 'black', color: 'white', padding: '10px',
+      borderRadius: '10px', fontSize: '18px',
     }}>
       <div style={{ display: 'block', alignItems: 'center', verticalAlign: 'middle' }}>
-        <AiOutlineCalendar style={{ fontSize: '20px', verticalAlign: 'middle' }} />&nbsp;
+        <AiOutlineCalendar style={{ fontSize: '18px', verticalAlign: 'middle' }} />&nbsp;
         {date}
       </div>
 
       <div style={{ display: 'block', alignItems: 'center', verticalAlign: 'middle' }}>
-        <BiTime style={{ fontSize: '20px', verticalAlign: 'middle' }} />&nbsp;
+        <BiTime style={{ fontSize: '18px', verticalAlign: 'middle' }} />&nbsp;
         {currentTime}
       </div>
 
