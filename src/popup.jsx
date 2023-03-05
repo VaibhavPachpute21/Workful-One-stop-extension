@@ -8,24 +8,27 @@ import { Provider } from 'react-redux';
 import store from './store';
 import Weather from "./Components/Weather/Weather";
 
-function Popup(){
-    return(
-        <div>
-            <Greet/>
-            <div style={{display:'flex',flexDirection:'row'}}>
-            <Time/>
-            <Todo/> 
-            </div>
-            <Weather/>
-            
+function Popup() {
+  return (
+    <div>
+      <Greet />
+      <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <Time />
+          <Weather />
         </div>
-    );
+        <Todo />
+      </div>
+
+
+    </div>
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('react-target'));
 root.render(
   <Provider store={store}>
-    <Popup/>
+    <Popup />
   </Provider>
 );
 
