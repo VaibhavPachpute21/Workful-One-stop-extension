@@ -6,6 +6,7 @@ import Time from './Components/Time/Time'
 import Todo from './Components/Todo/Todo'
 import { Provider } from 'react-redux';
 import store from './store';
+import Weather from "./Components/Weather/Weather";
 
 function Popup(){
     return(
@@ -15,6 +16,7 @@ function Popup(){
             <Time/>
             <Todo/> 
             </div>
+            <Weather/>
             
         </div>
     );
