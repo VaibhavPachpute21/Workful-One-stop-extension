@@ -7,7 +7,7 @@ const Weather = () => {
     name: '',
     country: '',
     temp: '',
-    feels:'',
+    feels: '',
     weather: '',
     weatherDes: '',
     icon: ''
@@ -29,7 +29,7 @@ const Weather = () => {
                 weather: results.weather[0].main,
                 weatherDes: results.weather[0].description,
                 icon: results.weather[0].icon,
-                feels:results.main.feels_like
+                feels: results.main.feels_like
               })
             }
             else {
@@ -50,7 +50,8 @@ const Weather = () => {
               temp: results.main.temp,
               weather: results.weather[0].main,
               weatherDes: results.weather[0].description,
-              icon: results.weather[0].icon
+              icon: results.weather[0].icon,
+              feels: results.main.feels_like
             })
           }
           else {
@@ -76,7 +77,8 @@ const Weather = () => {
             temp: results.main.temp,
             weather: results.weather[0].main,
             weatherDes: results.weather[0].description,
-            icon: results.weather[0].icon
+            icon: results.weather[0].icon,
+            feels: results.main.feels_like
           })
         }
         else {
@@ -93,14 +95,16 @@ const Weather = () => {
       style={weather.weather == 'Clouds' ? {
         border: '2px solid black', display: 'flex', flexDirection: 'column', justifyContent: 'center',
         width: '168px', height: 'max-content', padding: '10px', backgroundColor: '#9DD5FF',
-        borderRadius: '10px', fontSize: '18px',color:'white'
+        borderRadius: '10px', fontSize: '18px', color: 'white'
       } : weather.weather == 'Clear' ? {
         border: '2px solid black', display: 'flex', flexDirection: 'column', justifyContent: 'center',
         width: '168px', height: 'max-content', padding: '10px', backgroundColor: '#9DD5FF', //backgroundImage: 'linear-gradient(to right, blue , red)',
         borderRadius: '10px', fontSize: '18px', color: 'white'
       } : { backgroundColor: 'black' }}>
       <form onSubmit={search}>
-        <input placeholder='Search for City' onChange={(e) => { setCity(e.target.value) }} type={'text'} />
+        <input
+        style={{backgroundColor:'#F7F8F9', border:'1px solid #DBE2E9 !important', borderRadius:'100px',padding:'5px',fontSize:'12px'}}
+         placeholder='Search for City' onChange={(e) => { setCity(e.target.value) }} type={'text'} />
         {/* <button type='submit' onClick={search}>Search</button> */}
       </form>
 
@@ -108,11 +112,12 @@ const Weather = () => {
         <div>{Math.trunc(weather.temp)}&#8451;</div>
         <div><img src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`} alt="" /></div>
       </div>
+
       <div>{weather.weather}</div>
       <div>{weather.weatherDes}</div>
       <div>Feels like {Math.trunc(weather.feels)}&#8451;</div>
       <div>{weather.name + ' ' + weather.country}</div>
-     
+
 
 
 
