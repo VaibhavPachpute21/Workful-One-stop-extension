@@ -13,7 +13,9 @@ const TodosList = () => {
     <>
       {todos.todos.map((todo,idx) => {
         return <div key={idx} style={{
-          marginTop:'2px'}}>
+          marginTop:'2px',
+          
+          }}>
           <div style={{
             display:'flex'
           }}>
@@ -21,7 +23,9 @@ const TodosList = () => {
               width: '90%',
               border: '1px solid black',
               padding: '5px',
-              fontSize: '16px'
+              fontSize: '16px',
+              fontFamily:'serif',
+              textTransform: 'capitalize',
             }}
             
             />

@@ -22,7 +22,7 @@ const Time = () => {
     <div style={{
       border: '2px solid white', display: 'flex', flexDirection: 'column', justifyContent: 'center',
       width: '170px', height: '55px', backgroundColor: 'black', color: 'white', padding: '10px',
-      borderRadius: '10px', fontSize: '18px',
+      borderRadius: '10px', fontSize: '18px',fontFamily:'serif'
     }}>
       <div style={{ display: 'block', alignItems: 'center', verticalAlign: 'middle' }}>
         <AiOutlineCalendar style={{ fontSize: '18px', verticalAlign: 'middle' }} />&nbsp;

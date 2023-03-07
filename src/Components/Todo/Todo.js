@@ -31,7 +31,8 @@ const Todo = () => {
             flexDirection: 'column',
             padding: '5px',
             borderRadius: '10px',
-            width: '210px'
+            width: '210px',
+            fontFamily:'initial'
         }}
         >
             <span style={{
