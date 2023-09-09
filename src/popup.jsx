@@ -7,6 +7,7 @@ import Todo from './Components/Todo/Todo'
 import { Provider } from 'react-redux';
 import store from './store';
 import Weather from "./Components/Weather/Weather";
+import Reminder from "./Components/Reminder";
 
 function Popup() {
   return (
@@ -19,6 +20,7 @@ function Popup() {
         </div>
         <Todo />
       </div>
+      {/* <Reminder/> */}
 
 
     </div>
