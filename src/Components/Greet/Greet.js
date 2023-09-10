@@ -52,8 +52,10 @@ const Greet = () => {
                 style={{ fontSize: '16px', fontWeight: '500', color: 'white' }}
             >{quote.toString()}</div>
             <button id='notifyButton'
-            onClick={()=>{
-                chrome.notifications.create("alarmName", {delayInMinutes: 0.1, periodInMinutes: 0.1});
+            onClick={() => {
+                chrome.runtime.sendMessage({ time: "1" }, function (response) {
+                    console.log(response);
+                });
             }}
              style={{
                 position:'absolute',float:'right',right:'20px',cursor:'pointer'

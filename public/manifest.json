@@ -4,8 +4,7 @@
     "version": "0.1",
     "manifest_version": 3,
     "background": {
-        "scripts":["background.js"],
-        "persistent": false
+        "service_worker": "background.js"
     },
     "permissions": [
         "notifications",
