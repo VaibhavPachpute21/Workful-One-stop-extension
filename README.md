@@ -1,6 +1,6 @@
 
 # WorkFul
-[<img src="https://i.ibb.co/ZVdxdQf/icon.png" width="250"/>](WorkFul)
+[<img src="https://i.ibb.co/ZVdxdQf/icon.png" width="250"/>](https://github.com/VaibhavPachpute21/Workful-One-stop-extension)
 
 ## Description
 
